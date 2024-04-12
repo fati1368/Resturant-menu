@@ -1,16 +1,16 @@
 function NewElement(NameArray) {
   var list = document.getElementById("filter-list");
-  while (list.hasChildNodes()) {
-    list.removeChild(list.firstChild);
-  }
-  
+  list.innerHTML = "<div></div>";
+
   NameArray.map(function (item, i) {
     var LiElement = document.createElement("LI");
-    LiElement.setAttribute("class","flex col-1")
+    LiElement.setAttribute("class", "flex col-1 align-center");
     LiElement.innerHTML =
-      "<img src=" +
+      "<div><img src= " +
       item.pic +
-      " /> <div><h3>" +
+      " " +
+      "/></div>" +
+      "<div class='text' ><h3>" +
       item.Name +
       "</h3><p>" +
       item.description +
