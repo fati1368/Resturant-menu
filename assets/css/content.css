@@ -41,6 +41,19 @@ cursor: pointer;
 .header .ButtonFilter li button:hover{
     background-color: #f07503a4;
 }
+#left{
+    display:none;
+}
+#right{
+    display:none;
+}
+.item .image-menu img{
+    width: 100%;
+    height:auto;
+}
+.list{
+flex-basis: 100%;
+}
 .item ul li img{
     width:100px;
     height:100px;
