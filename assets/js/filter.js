@@ -22,7 +22,7 @@ function AllElement(NameArray) {
   });
   return;
 }
-AllElement(ItemList)
+AllElement(ItemList);
 
 function FilterElement(NameArray) {
   var list = document.getElementById("filter-list");
@@ -50,15 +50,15 @@ function FilterElement(NameArray) {
 }
 function MyFilter(check) {
   if (check === "all") {
-    document.getElementById("right").style.display="none";
-    document.getElementById("left").style.display="none";
+    document.getElementById("right").style.display = "none";
+    document.getElementById("left").style.display = "none";
     AllElement(ItemList);
     return;
   }
   if (check === "MainMenu") {
-    document.getElementById("right").style.display="inline-block";
-    document.getElementById("left").style.display="none";
-    document.querySelector("#right img").src="assets/pic/new/morgh.png";
+    document.getElementById("right").style.display = "flex";
+    document.getElementById("left").style.display = "none";
+    document.querySelector("#right img").src = "assets/pic/new/morgh.png";
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "MainMenu";
     });
@@ -66,9 +66,9 @@ function MyFilter(check) {
     return;
   }
   if (check === "FastFood") {
-    document.getElementById("right").style.display="none";
-    document.getElementById("left").style.display="inline-block";
-    document.querySelector("#left img").src="assets/pic/new/pizza.png";
+    document.getElementById("right").style.display = "none";
+    document.getElementById("left").style.display = "flex";
+    document.querySelector("#left img").src = "assets/pic/new/pizza.png";
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "FastFood";
     });
@@ -76,9 +76,9 @@ function MyFilter(check) {
     return;
   }
   if (check === "Appetizer") {
-    document.getElementById("right").style.display="none";
-    document.getElementById("left").style.display="inline-block";
-    document.querySelector("#left img").src="assets/pic/new/sezaaar.webp";
+    document.getElementById("right").style.display = "none";
+    document.getElementById("left").style.display = "flex";
+    document.querySelector("#left img").src = "assets/pic/new/sezaaar.webp";
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "Appetizer";
     });
@@ -86,9 +86,9 @@ function MyFilter(check) {
     return;
   }
   if (check === "Deser") {
-    document.getElementById("left").style.display="none";
-    document.getElementById("right").style.display="inline-block";
-    document.querySelector("#right img").src="assets/pic/new/desert.png";
+    document.getElementById("left").style.display = "none";
+    document.getElementById("right").style.display = "flex";
+    document.querySelector("#right img").src = "assets/pic/new/desert.png";
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "Deser";
     });
@@ -96,9 +96,9 @@ function MyFilter(check) {
     return;
   }
   if (check === "cold") {
-    document.getElementById("right").style.display="inline-block";
-    document.getElementById("left").style.display="none";
-    document.querySelector("#right img").src="assets/pic/new/colddd.jpg";
+    document.getElementById("right").style.display = "flex";
+    document.getElementById("left").style.display = "none";
+    document.querySelector("#right img").src = "assets/pic/new/colddd.jpg";
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "cold";
     });
@@ -106,16 +106,13 @@ function MyFilter(check) {
     return;
   }
   if (check === "warm") {
-    document.getElementById("left").style.display="inline-block";
-    document.getElementById("right").style.display="none";
-    document.querySelector("#left img").src="assets/pic/new/cafe.webp";
+    document.getElementById("left").style.display = "flex";
+    document.getElementById("right").style.display = "none";
+    document.querySelector("#left img").src = "assets/pic/new/cafe.webp";
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "warm";
     });
     FilterElement(newArray);
     return;
   }
-  
 }
-
-

@@ -43,9 +43,11 @@ cursor: pointer;
 }
 #left{
     display:none;
+    align-items: center;
 }
 #right{
     display:none;
+    align-items: center;
 }
 .item .image-menu img{
     width: 100%;
