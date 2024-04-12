@@ -1,19 +1,19 @@
 <html>
   <head>
     <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="assets/font/IranNastaliq/stylesheet.css" />
     <link rel="stylesheet" href="assets/css/general.css" />
     <link rel="stylesheet" href="assets/css/content.css" />
     <link rel="stylesheet" href="assets/font/font/brands.css" />
     <link rel="stylesheet" href="assets/font/font/fontawesome.css" />
     <link rel="stylesheet" href="assets/font/font/regular.css" />
     <link rel="stylesheet" href="assets/font/font/solid.css" />
-    <link rel="stylesheet" href="assets/font/IranNastaliq/stylesheet.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <header class="header">
       <h1 class="logoName">رسـتوران هزار و یک شـب</h1>
-      <ul class="ButtonFilter flex">
+      <ul class="ButtonFilter flex center">
         <li><button onclick="MyFilter('all')">همه</button></li>
         <li><button>پیش غذا</button></li>
         <li><button onclick="MyFilter('MainMenu')">غذای اصلی</button></li>
@@ -24,7 +24,9 @@
       </ul>
     </header>
     <section class="item">
-      <ul id="filter-list"></ul>
+      <div class="container">
+        <ul id="filter-list" class="flex"></ul>
+      </div>
     </section>
     <footer></footer>
     <script src="assets/js/array.js"></script>

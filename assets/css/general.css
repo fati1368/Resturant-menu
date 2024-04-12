@@ -1,27 +1,47 @@
-*{
-box-sizing:border-box;
-padding:0;
-margin:0;
-text-decoration:none;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
 }
-ul,li{
-list-style:none;
+ul,
+li {
+  list-style: none;
 }
-a{
-color:#c0c0c0;
+a {
+  color: #c0c0c0;
 }
-html{
-font-size:10px;
+html {
+  font-size: 10px;
 }
-body{
-direction:rtl;
-background-color:#151515;
-font-family:iran-sanse;
-color:#fff;
+body {
+  font-family: vazirmatn;
+  direction: rtl;
+  background-color: #151515;
+  color: #fff;
 }
-.flex{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+@font-face {
+  font-family: vazirmatn;
+  src: url("../font/vazir/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.container{
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.col-1 {
+  flex-basis: 50%;
+  padding:1em
+  
 }

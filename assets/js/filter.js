@@ -6,6 +6,7 @@ function NewElement(NameArray) {
   
   NameArray.map(function (item, i) {
     var LiElement = document.createElement("LI");
+    LiElement.setAttribute("class","flex col-1")
     LiElement.innerHTML =
       "<img src=" +
       item.pic +
