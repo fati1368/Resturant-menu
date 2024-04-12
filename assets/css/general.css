@@ -17,7 +17,7 @@ html {
 body {
   font-family: vazirmatn;
   direction: rtl;
-  background-color: #151515;
+  background-color:#020202;
   color: #fff;
 }
 @font-face {
@@ -44,5 +44,5 @@ body {
 }
 .col-1 {
   flex-basis: 50%;
-  padding:1em
+  padding:1em;
 }

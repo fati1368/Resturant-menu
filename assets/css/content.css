@@ -1,3 +1,8 @@
+.header{
+    background-image: url(../pic/Untitled-1.jpg);
+    background-repeat: no-repeat;
+    background-size:contain;
+}
 .header .logoName{
     font-family: 'IranNastaliq';
     font-size:7rem;
@@ -41,4 +46,29 @@ flex-wrap: nowrap;
 .item ul li p{
     font-size:1.2rem;
     padding-bottom: 1em;
+    min-height: 50px;
+}
+footer {
+    font-size:1.5rem;
+    background-color: rgb(19, 18, 18);
+    line-height: 2;
+    padding: 3em;
+    margin-top: 3em;
+    background-image: url(../pic/Untitled-2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+footer .container{
+    justify-content: space-between;
+}
+footer .location{
+    text-align: center;
+}
+footer .location .icon{
+    font-size:3rem;
+}
+footer .social ul{
+    gap:30px;
+    font-size:2rem
+
 }

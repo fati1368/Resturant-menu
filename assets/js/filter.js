@@ -5,6 +5,7 @@ function NewElement(NameArray) {
   NameArray.map(function (item, i) {
     var LiElement = document.createElement("LI");
     LiElement.setAttribute("class", "flex col-1 align-center");
+    var currency = new Intl.NumberFormat("de-DE").format(item.price);
     LiElement.innerHTML =
       "<div><img src= " +
       item.pic +
@@ -14,14 +15,14 @@ function NewElement(NameArray) {
       item.Name +
       "</h3><p>" +
       item.description +
-      "</p> <h2> قیمت: " +
-      item.price +
-      "</h2></div>";
+      "</p> <h2> قیمت:  Rial " +
+      currency +
+      " </h2></div>";
     list.appendChild(LiElement);
   });
   return;
 }
-
+NewElement(ItemList)
 function MyFilter(check) {
   if (check === "all") {
     NewElement(ItemList);
