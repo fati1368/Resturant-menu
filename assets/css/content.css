@@ -5,8 +5,9 @@
 }
 .header .logoName{
     font-family: 'IranNastaliq';
-    font-size:7rem;
+    font-size:6.3rem;
     text-align: center;
+    padding-top: 0.2em;
 }
 .header .ButtonFilter li button{
 background-color: #000;

@@ -30,16 +30,45 @@ function MyFilter(check) {
   }
   if (check === "MainMenu") {
     let newArray = ItemList.filter(function (ItemList) {
-      return ItemList.Type == "MainMenu";
+      return ItemList.Type === "MainMenu";
     });
     NewElement(newArray);
     return;
   }
   if (check === "FastFood") {
     let newArray = ItemList.filter(function (ItemList) {
-      return ItemList.Type == "FastFood";
+      return ItemList.Type === "FastFood";
     });
     NewElement(newArray);
     return;
   }
+  if (check === "Appetizer") {
+    let newArray = ItemList.filter(function (ItemList) {
+      return ItemList.Type === "Appetizer";
+    });
+    NewElement(newArray);
+    return;
+  }
+  if (check === "Deser") {
+    let newArray = ItemList.filter(function (ItemList) {
+      return ItemList.Type === "Deser";
+    });
+    NewElement(newArray);
+    return;
+  }
+  if (check === "cold") {
+    let newArray = ItemList.filter(function (ItemList) {
+      return ItemList.Type === "cold";
+    });
+    NewElement(newArray);
+    return;
+  }
+  if (check === "warm") {
+    let newArray = ItemList.filter(function (ItemList) {
+      return ItemList.Type === "warm";
+    });
+    NewElement(newArray);
+    return;
+  }
+  
 }
