@@ -3,7 +3,6 @@
     <title>Restaurant Menu</title>
     <link rel="stylesheet" href="assets/css/general.css" />
     <link rel="stylesheet" href="assets/css/content.css" />
-    <link rel="stylesheet" href="assets/css/responsiv.css" />
     <link rel="stylesheet" href="assets/font/font/brands.css" />
     <link rel="stylesheet" href="assets/font/font/fontawesome.css" />
     <link rel="stylesheet" href="assets/font/font/regular.css" />
@@ -12,117 +11,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1 class="logoName">رسـتوران هزار و یک شـب</h1>
-      <ul class="ButtonFilter">
-        <li><button>همه</button></li>
+      <ul class="ButtonFilter flex">
+        <li><button onclick="MyFilter('all')">همه</button></li>
         <li><button>پیش غذا</button></li>
-        <li><button>غذای اصلی</button></li>
-        <li><button>فست فود</button></li>
+        <li><button onclick="MyFilter('MainMenu')">غذای اصلی</button></li>
+        <li><button onclick="MyFilter('FastFood')">فست فود</button></li>
         <li><button>دسر</button></li>
         <li><button>نوشیدنی داغ</button></li>
         <li><button>نوشیدنی سرد</button></li>
       </ul>
     </header>
-    <section class="item"></section>
+    <section class="item">
+      <ul id="filter-list"></ul>
+    </section>
     <footer></footer>
-    <script>
-      let ItemList = [
-        {
-          Name: " زرشک پلو با مرغ",
-          Type: "MainMenu",
-          pic: "",
-          description:
-            "ران مرغ ۴۰۰ گرمی، برنج ایرانی ۳۵۰ گرمی، نثار زرشک زعفرانی، گوجه کبابی، لیمو، پیاز سماقی، ریحان، زیتون",
-          price: 2500000,
-        },
-        {
-          Name: "چلو ماهیچه گوسفندی",
-          Type: "MainMenu",
-          pic: "",
-          description:
-            "ماهیچه گوسفندی ۵۰۰ گرمی، ۳۵۰ گرم برنج ایرانی، نثار زعفرانی، گوجه کبابی، لیمو، پیاز سماقی، ریحان، زیتون",
-          price: 7500000,
-        },
-        {
-          Name: "چلو ماهی قزل آلای سرخ شده",
-          Type: "MainMenu",
-          pic: "",
-          description:
-            "یک عدد ماهی قزل آلای سرخ شده ۴۵۰ گرمی، برنج ایرانی ۳۵۰ تا ۴۰۰ گرم، دورچین: سبزی، لیمو ترش، سبزی",
-          price: 3700000,
-        },
-        {
-          Name: "خوراک کباب وزیری",
-          Type: "MainMenu",
-          pic: "",
-          description:
-            "یک سیخ کباب لقمه گوشت مخلوط راسته گوساله و فیله گوسفندی ۲۵۰ گرمی، یک سیخ جوجه کباب سینه مرغ ۲۵۰ گرمی، گوجه کبابی، لیمو، پیاز سماقی، ریحان، زیتون",
-          price: 4700000,
-        },
-        {
-          Name: "خوراک کاسه کباب",
-          Type: "MainMenu",
-          pic: "",
-          description:
-            "یک سیخ ۲۱۰ گرمی شامل (کباب لقمه و جوجه کباب و کباب چنجه گوساله)، دورچین: گوجه کبابی، فلفل کبابی، پیاز جعفری، نارنج",
-          price: 3500000,
-        },
-        {
-          Name: "پیتزا سیر و استیک ایتالیایی",
-          Type: "FastFood",
-          pic: "",
-          description:
-            "خمیر پیتزا ایتالیایی، گوشت گوساله گریل شده، قارچ، پیاز، زیتون سیاه، سس سیر، پنیر پیتزا، سس گوجه فرنگی تازه",
-          price: 2500000,
-        },
-        {
-          Name: "پیتزا وگان ایتالیایی",
-          Type: "FastFood",
-          pic: "",
-          description:
-            "خمیر پیتزا ایتالیایی، قارچ، فلفل دلمه ای رنگی، پیاز، بادمجان، کدو، سس گوجه فرنگی تازه",
-          price: 3500000,
-        },
-        {
-          Name: "پیتزا مخصوص ویدو آمریکایی",
-          Type: "FastFood",
-          pic: "",
-          description:
-            "خمیر پیتزا دست ساز آمریکایی، سس مخصوص، ژامبون گوشت ۹۰%، ژامبون مرغ ۹۰%، کالباس خشک ۷۰%، قارچ، فلفل دلمه ای، زیتون سیاه اسلایسی، پنیر میکس",
-          price: 2700000,
-        },
-        {
-          Name: "پیتزا مخصوص سیتکا آمریکایی (دو نفره)",
-          Type: "FastFood",
-          pic: "",
-          description:
-            "خمیر پیتزا آمریکایی، سس مخصوص، پنیر پیتزا، گوشت چرخ کرده ران گوساله، ژامبون گوشت، ژامبون مرغ، هات داگ، قارچ، فلفل دلمه ای، زیتون، ادویه مخصوص",
-          price: 2900000,
-        },
-        {
-          Name: "کریسپی برگر",
-          Type: "FastFood",
-          pic: "",
-          description:
-            "۱۴۰ گرم سینه سوخاری، سس مخصوص، همراه با سیب تنوری و سالاد سبز",
-          price: 2500000,
-        },
-        {
-          Name: "پنیر هالومی سوخاری",
-          Type: "FastFood",
-          pic: "",
-          description: "۴ تکه پنیر سوخاری",
-          price: 3500000,
-        },
-        {
-          Name: "سالاد سزار با مرغ گریل",
-          Type: "Appetizer",
-          pic: "",
-          description: "کاهو، مرغ گریل، پنیر مخصوص، زیتون، نان کروتان، سس سزار",
-          price: 2700000,
-        },
-      ];
-    </script>
+    <script src="assets/js/array.js"></script>
+    <script src="assets/js/filter.js"></script>
   </body>
 </html>

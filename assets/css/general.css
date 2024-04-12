@@ -19,3 +19,9 @@ background-color:#151515;
 font-family:iran-sanse;
 color:#fff;
 }
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
