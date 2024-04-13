@@ -48,6 +48,22 @@ function FilterElement(NameArray) {
   });
   return;
 }
+function animation(direction, picture) {
+  if (direction === "right") {
+    document.getElementById("right").style.display = "flex";
+    document.getElementById("left").style.display = "none";
+    var image = document.querySelector("#right");
+    image.innerHTML='<img class="animation-3" src='+picture+ ' / >'
+    return;
+  }
+  if (direction === "left") {
+    document.getElementById("right").style.display = "none";
+    document.getElementById("left").style.display = "flex";
+    var image = document.querySelector("#left");
+    image.innerHTML='<img class="animation-2" src='+picture+ ' / >'
+    return;
+  }
+}
 function MyFilter(check) {
   if (check === "all") {
     document.getElementById("right").style.display = "none";
@@ -56,9 +72,7 @@ function MyFilter(check) {
     return;
   }
   if (check === "MainMenu") {
-    document.getElementById("right").style.display = "flex";
-    document.getElementById("left").style.display = "none";
-    document.querySelector("#right img").src = "assets/pic/new/morgh.png";
+    animation("right", "assets/pic/new/morgh.png");
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "MainMenu";
     });
@@ -66,9 +80,7 @@ function MyFilter(check) {
     return;
   }
   if (check === "FastFood") {
-    document.getElementById("right").style.display = "none";
-    document.getElementById("left").style.display = "flex";
-    document.querySelector("#left img").src = "assets/pic/new/pizza.png";
+    animation("left", "assets/pic/new/pizza.png");
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "FastFood";
     });
@@ -76,9 +88,7 @@ function MyFilter(check) {
     return;
   }
   if (check === "Appetizer") {
-    document.getElementById("right").style.display = "none";
-    document.getElementById("left").style.display = "flex";
-    document.querySelector("#left img").src = "assets/pic/new/sezaaar.webp";
+    animation("left", "assets/pic/new/sezaaar.webp");
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "Appetizer";
     });
@@ -86,9 +96,7 @@ function MyFilter(check) {
     return;
   }
   if (check === "Deser") {
-    document.getElementById("left").style.display = "none";
-    document.getElementById("right").style.display = "flex";
-    document.querySelector("#right img").src = "assets/pic/new/desert.png";
+    animation("right", "assets/pic/new/desert.png");
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "Deser";
     });
@@ -96,9 +104,7 @@ function MyFilter(check) {
     return;
   }
   if (check === "cold") {
-    document.getElementById("right").style.display = "flex";
-    document.getElementById("left").style.display = "none";
-    document.querySelector("#right img").src = "assets/pic/new/colddd.jpg";
+    animation("right", "assets/pic/new/colddd.jpg");
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "cold";
     });
@@ -106,9 +112,7 @@ function MyFilter(check) {
     return;
   }
   if (check === "warm") {
-    document.getElementById("left").style.display = "flex";
-    document.getElementById("right").style.display = "none";
-    document.querySelector("#left img").src = "assets/pic/new/cafe.webp";
+    animation("left", "assets/pic/new/cafe.webp");
     let newArray = ItemList.filter(function (ItemList) {
       return ItemList.Type === "warm";
     });
@@ -116,4 +120,3 @@ function MyFilter(check) {
     return;
   }
 }
-
