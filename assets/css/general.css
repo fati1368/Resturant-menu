@@ -51,11 +51,11 @@ body {
 }
 @keyframes myAnim {
 	0% {
-		transform: scale(0.5);
+		opacity: 0;
 	}
 
 	100% {
-		transform: scale(1);
+		opacity: 1;
 	}
 }
 .animation-2{
@@ -148,5 +148,17 @@ body {
 	100% {
 		animation-timing-function: ease-out;
 		transform: translateX(0);
+	}
+}
+.animation-4{
+  animation: myAnim-pic 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnim-pic {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
 	}
 }

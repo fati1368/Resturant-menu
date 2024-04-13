@@ -64,12 +64,16 @@ flex-basis: 100%;
     object-fit: cover;
     border: #e77407 solid 5px;
 }
+.item ul{
+    align-content: flex-start;
+}
 .item ul li {
 flex-wrap: nowrap;
 
 }
 .item ul li .text{
     flex-basis:100% ;
+    margin-top: 1.5em;
 }
 .item ul li h3{
     font-size:1.8rem;
@@ -85,6 +89,18 @@ flex-wrap: nowrap;
     font-size:1.2rem;
     padding-bottom: 1em;
     min-height: 50px;
+}
+.item .current{
+    text-align: right; 
+    justify-content: space-between;  
+    flex-wrap: nowrap;
+    padding:0.5em 0;
+}
+.item ul li .title{
+    font-size:1.8rem;
+    font-weight: bold;
+    color: #e77407;
+    min-width: 180px;
 }
 footer {
     font-size:1.5rem;

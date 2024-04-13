@@ -7,11 +7,11 @@ function AllElement(NameArray) {
     LiElement.setAttribute("class", "flex col-1 align-center");
     var currency = new Intl.NumberFormat("de-DE").format(item.price);
     LiElement.innerHTML =
-      "<div><img src= " +
+      "<div ><img class='animation-4' src= " +
       item.pic +
       " " +
       "/></div>" +
-      "<div class='text' ><h3>" +
+      "<div class='text animation-1' ><h3>" +
       item.Name +
       "</h3><p>" +
       item.description +
@@ -33,15 +33,10 @@ function FilterElement(NameArray) {
     LiElement.setAttribute("class", "flex list align-center");
     var currency = new Intl.NumberFormat("de-DE").format(item.price);
     LiElement.innerHTML =
-      "<div><img src= " +
-      item.pic +
-      " " +
-      "/></div>" +
-      "<div class='text' ><h3>" +
+      "<div class='text flex current' ><h4 class='current title' >" +
       item.Name +
-      "</h3><p>" +
-      item.description +
-      "</p> <h2> قیمت:  Rial " +
+      "</h4> <h2 class='current' > ................................................ </h2> <h2 class='current' >" +
+      " قیمت:  Rial " +
       currency +
       " </h2></div>";
     list.appendChild(LiElement);
@@ -53,14 +48,14 @@ function animation(direction, picture) {
     document.getElementById("right").style.display = "flex";
     document.getElementById("left").style.display = "none";
     var image = document.querySelector("#right");
-    image.innerHTML='<img class="animation-3" src='+picture+ ' / >'
+    image.innerHTML = '<img class="animation-3" src=' + picture + " / >";
     return;
   }
   if (direction === "left") {
     document.getElementById("right").style.display = "none";
     document.getElementById("left").style.display = "flex";
     var image = document.querySelector("#left");
-    image.innerHTML='<img class="animation-2" src='+picture+ ' / >'
+    image.innerHTML = '<img class="animation-2" src=' + picture + " / >";
     return;
   }
 }

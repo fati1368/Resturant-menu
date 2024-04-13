@@ -64,7 +64,7 @@ let ItemList = [
       price: 2700000,
     },
     {
-      Name: "پیتزا مخصوص سیتکا آمریکایی (دو نفره)",
+      Name: "پیتزا مخصوص سیتکا آمریکایی ",
       Type: "FastFood",
       pic: "assets/pic/setika.jpeg",
       description:
